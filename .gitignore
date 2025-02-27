@@ -1,0 +1,32 @@
+# Django-specific ignores
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+.env
+*.sqlite3
+/media/
+/staticfiles/
+
+# Docker generated
+db_data/
+redis_data/
+
+# Python-related ignores
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+# Ignore virtual environments
+venv/
+.env/
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo

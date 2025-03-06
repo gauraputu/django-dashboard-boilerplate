@@ -22,7 +22,8 @@ services:
     depends_on:
       - db-app
       - redis
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py tailwind runserver 0.0.0.0:8000
+    tty: true
 
   # worker:
   #   build: .

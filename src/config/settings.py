@@ -1,8 +1,11 @@
 from pathlib import Path
 from datetime import timedelta
 import os
+import sys
 from dotenv import load_dotenv
 from . import __version__
+
+sys.path.append(os.path.abspath("src"))
 
 load_dotenv(override=True)
 
@@ -23,6 +26,13 @@ VERSION = __version__
 
 # Application definition
 INSTALLED_APPS = [
+    "unfold",
+    "unfold.contrib.filters",
+    "unfold.contrib.forms",
+    "unfold.contrib.inlines",
+    "unfold.contrib.import_export",
+    "unfold.contrib.guardian",
+    "unfold.contrib.simple_history",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -30,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.humanize',
     'django.contrib.staticfiles',
+    'custom_admin',
+    'django_cotton',
+    'django_tailwind_cli',
+    'django_browser_reload',
+    'front_page',
 ]
 
 MIDDLEWARE = [
@@ -40,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
 ROOT_URLCONF = 'src.config.urls'
@@ -48,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(os.path.dirname(__file__), 'templates'),
+            BASE_DIR / 'src' / 'templates',
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -108,11 +124,11 @@ USE_I18N = True
 STATIC_URL = '/public/static/'
 MEDIA_URL = '/public/media/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    BASE_DIR / 'src' / 'static',
 ]
 
-STATIC_ROOT = os.getenv('STATIC_ROOT')
-MEDIA_ROOT = os.getenv('MEDIA_ROOT')
+STATIC_ROOT = BASE_DIR / 'public' / 'static'
+MEDIA_ROOT = BASE_DIR / 'public' / 'media'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

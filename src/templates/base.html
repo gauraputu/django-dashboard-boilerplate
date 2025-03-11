@@ -10,7 +10,10 @@
     <!-- Tailwind CSS -->
     {% tailwind_css %}
     <!-- Alpine.js -->
-    <script defer src="{% static 'js/alpinejs-3.14.8/dist/cdn.min.js'%}"></script>
+    <script defer src="{% static 'plugins/alpinejs-3.14.8/dist/cdn.min.js'%}"></script>
+    <!-- DaisyUI-->
+    <link href="{% static 'plugins/daisyui-5.0.2/daisyui.min.css'%}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'plugins/daisyui-5.0.2/theme.css'%}" rel="stylesheet" type="text/css" />
     {% block stylesheet %}{% endblock %}
   </head>
   <body>

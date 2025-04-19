@@ -24,6 +24,7 @@ build/
 # Ignore virtual environments
 venv/
 .env/
+.venv/
 
 # Ignore IDE and editor files
 .vscode/

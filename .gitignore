@@ -30,3 +30,6 @@ venv/
 .idea/
 *.swp
 *.swo
+
+# Ignore node
+node_modules/

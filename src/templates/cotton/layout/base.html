@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% load tailwind_cli %}
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,12 @@
     {% tailwind_css %}
     <!-- Alpine.js -->
     <script defer src="{% static 'plugins/alpinejs-3.14.8/dist/cdn.min.js'%}"></script>
-    <!-- DaisyUI-->
-    <link href="{% static 'plugins/daisyui-5.0.2/daisyui.min.css'%}" rel="stylesheet" type="text/css" />
-    <link href="{% static 'plugins/daisyui-5.0.2/theme.css'%}" rel="stylesheet" type="text/css" />
     <c-layout.css>{{ css }}</c-layout.css>
   </head>
   <body>
-    <div class="flex flex-col">
+    <div class="h-screen flex flex-col">
       <c-navbar />
-      <div class="flex flex-row">
+      <div class="flex flex-row flex-1 overflow-hidden">
         <c-sidebar />
         <div>{{slot}}</div>
       </div>

@@ -89,7 +89,7 @@ DATABASES = {
         'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PASSWORD','password'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
-        'PORT': os.getenv('DB_POST', 5432),
+        'PORT': os.getenv('DB_PORT', 5432),
         'DISABLE_SERVER_SIDE_CURSORS': True,
     }
 }

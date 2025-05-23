@@ -2,12 +2,10 @@ from pathlib import Path
 from datetime import timedelta
 import os
 import sys
-from dotenv import load_dotenv
 from . import __version__
 
 sys.path.append(os.path.abspath("src"))
 
-load_dotenv(override=True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent

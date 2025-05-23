@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'custom_admin',
     'django_cotton',
-    'django_tailwind_cli',
     'django_browser_reload',
     'front_page',
 ]

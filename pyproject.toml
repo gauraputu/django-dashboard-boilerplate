@@ -12,7 +12,6 @@ dependencies = [
     "django==5.1.6",
     "django-browser-reload==1.18.0",
     "django-cotton==1.6.0",
-    "django-tailwind-cli==4.1.0",
     "django-typer==3.0.0",
     "django-unfold==0.50.0",
     "dotenv==0.9.9",

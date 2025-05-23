@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 {% load static %}
-{% load tailwind_cli %}
 <html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML 5 Boilerplate</title>
-    <!-- Tailwind CSS -->
-    {% tailwind_css %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <!-- Alpine.js -->
     <script defer src="{% static 'plugins/alpinejs-3.14.8/dist/cdn.min.js'%}"></script>
     <c-layout.css>{{ css }}</c-layout.css>
@@ -22,6 +20,6 @@
       </div>
     </div>
     <c-layout.js>{{ js }}</c-layout.js>
-    <script src="{% static 'plugins/flyonui-2.0.1/flyonui.js' %}"></script>
+    <script src="{% static 'js/sidebar.js' %}"></script>
   </body>
 </html>

@@ -127,7 +127,6 @@ dependencies = [
     { name = "django" },
     { name = "django-browser-reload" },
     { name = "django-cotton" },
-    { name = "django-tailwind-cli" },
     { name = "django-typer" },
     { name = "django-unfold" },
     { name = "dotenv" },
@@ -158,7 +157,6 @@ requires-dist = [
     { name = "django", specifier = "==5.1.6" },
     { name = "django-browser-reload", specifier = "==1.18.0" },
     { name = "django-cotton", specifier = "==1.6.0" },
-    { name = "django-tailwind-cli", specifier = "==4.1.0" },
     { name = "django-typer", specifier = "==3.0.0" },
     { name = "django-unfold", specifier = "==0.50.0" },
     { name = "dotenv", specifier = "==0.9.9" },
@@ -178,21 +176,6 @@ requires-dist = [
 dev = [
     { name = "ruff", specifier = ">=0.11.8" },
     { name = "rust-just", specifier = ">=1.40.0" },
-]
-
-[[package]]
-name = "django-tailwind-cli"
-version = "4.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "django" },
-    { name = "django-typer" },
-    { name = "requests" },
-    { name = "semver" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/1e/43/8acfc03ed841cd074ca899193e1a0cbe6609e6c6f660e88095a5c935bee3/django_tailwind_cli-4.1.0.tar.gz", hash = "sha256:3e25bdc5e5fba17a6f6f38c1054897f350575e16022066eb274a64dbe80cc039", size = 64676, upload-time = "2025-02-13T21:56:06.61Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/35/24/09e49509b7575441adf9d1a3744e0685cfad0be4761a91037e5014df6258/django_tailwind_cli-4.1.0-py3-none-any.whl", hash = "sha256:4eb4c6bcc02661ee40b2a83dfa434aaa71867711cae5d2b6033d331f559a9408", size = 12191, upload-time = "2025-02-13T21:56:04.057Z" },
 ]
 
 [[package]]

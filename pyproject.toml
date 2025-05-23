@@ -10,6 +10,7 @@ dependencies = [
     "charset-normalizer==3.4.1",
     "click==8.1.8",
     "django==5.1.6",
+    "django-bootstrap5>=25.1",
     "django-browser-reload==1.18.0",
     "django-cotton==1.6.0",
     "django-typer==3.0.0",

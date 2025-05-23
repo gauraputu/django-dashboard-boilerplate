@@ -27,3 +27,8 @@ dependencies = [
     "typing-extensions==4.12.2",
     "urllib3==2.3.0",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.8",
+]

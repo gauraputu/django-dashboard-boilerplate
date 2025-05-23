@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django_browser_reload.middleware.BrowserReloadMiddleware',
 ]
 
-ROOT_URLCONF = 'src.config.urls'
+ROOT_URLCONF = 'core.urls'
 
 TEMPLATES = [
     {
@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'src.config.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
 
 
 # Database
@@ -138,18 +138,6 @@ LOCALE_PATHS = [
 ]
 
 # LOGGING
-LOG_DIR = os.path.join(BASE_DIR, 'log')
-LOG_FILE = '/django-critical.log'
-LOG_PATH = LOG_DIR + LOG_FILE
-
-if not os.path.exists(LOG_DIR):
-    os.mkdir(LOG_DIR)
-
-if not os.path.exists(LOG_PATH):
-    f = open(LOG_PATH, 'a').close() #create empty log file
-else:
-    f = open(LOG_PATH,"w").close() #clear log file
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -168,18 +156,18 @@ LOGGING = {
             'level': 'ERROR',
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'filename': os.path.join(BASE_DIR, 'log', 'django-error.log'),
-            'when': 'D', # interval Day
-            'interval': 1, # 1 Day 
-            'backupCount': 10, # backup after 10 Days
+            'when': 'D',
+            'interval': 1,
+            'backupCount': 10,
             'formatter': 'verbose',
         },
         'critical': {
             'level': 'CRITICAL',
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': LOG_PATH,
-            'when': 'D', # interval Day
-            'interval': 1, # 1 Day 
-            'backupCount': 10, # backup after 10 Days
+            'filename': os.path.join(BASE_DIR, 'log', 'django-critical.log'),
+            'when': 'D',
+            'interval': 1,
+            'backupCount': 10,
             'formatter': 'verbose',
         },
     },

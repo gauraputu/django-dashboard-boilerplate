@@ -11,7 +11,7 @@ default:
 @dev:
     just database
     just update
-    uv run python -m manage tailwind runserver 0.0.0.0:8000
+    uv run python -m manage runserver 0.0.0.0:8000
 
 # Install and/or update all dependencies defined in pyproject.toml
 @update:

@@ -18,7 +18,7 @@ Run all the below command on the same directory with `docker-compose.yaml`
 
 2. Run developement server with the following command
     ```
-    uv run python -m manage tailwind runserver 0.0.0.0:8000
+    uv run python -m manage runserver 0.0.0.0:8000
     ```
 
 3. On the first time running, run migrations with

@@ -30,3 +30,6 @@ Run all the below command on the same directory with `docker-compose.yaml`
     ```
     uv run python -m manage createsuperuser
     ```
+
+## Development Note
+- Icon is using Tablericons, browse availalbe icons [here](https://tablericons.com/)

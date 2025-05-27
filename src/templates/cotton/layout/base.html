@@ -16,14 +16,7 @@
     <c-layout.css>{{ css }}</c-layout.css>
   </head>
   <body>
-    <div class="page">
-      <c-navbar />
-      <div class="page-wrapper">
-        <div class="page-body">
-          <div class="container-xl">{{slot}}</div>
-        </div>
-      </div>
-    </div>
+    {{slot}}
     <c-layout.js>{{ js }}</c-layout.js>
     <!-- Tabler -->
     <script defer src="{% static 'plugins/tabler-1.3.2/tabler.min.js' %}"></script>

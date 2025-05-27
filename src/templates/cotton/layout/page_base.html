@@ -1,0 +1,12 @@
+<c-layout.base>
+    <div class="page">
+        <c-navbar />
+        <div class="page-wrapper">
+          <div class="page-body">
+            <div class="container-xl">{{slot}}</div>
+          </div>
+        </div>
+      </div>
+      <c-slot name="css">{{ css }}</c-slot>
+      <c-slot name="js">{{ js }}</c-slot>
+</c-layout.base>

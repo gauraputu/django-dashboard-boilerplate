@@ -23,6 +23,7 @@ from front_page import views as front_page_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', front_page_views.index.as_view(), name='front-page-index'),
+    path('accounts/', include('allauth.urls')),
     path("__reload__/", include("django_browser_reload.urls")),
 ]
 

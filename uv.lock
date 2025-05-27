@@ -91,6 +91,16 @@ wheels = [
 ]
 
 [[package]]
+name = "django-allauth"
+version = "65.8.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "asgiref" },
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/65/3a/b9f572de1decadc668c7d73d0751ff05ff282d3c2cd17d7f74d17afd1fc4/django_allauth-65.8.1.tar.gz", hash = "sha256:38f54708eb06e542af33beeb553e0abb0d7524fded43a5e42c078f20d8e9fc18", size = 1681310, upload-time = "2025-05-21T19:21:41.878Z" }
+
+[[package]]
 name = "django-bootstrap5"
 version = "25.1"
 source = { registry = "https://pypi.org/simple" }
@@ -137,6 +147,7 @@ dependencies = [
     { name = "charset-normalizer" },
     { name = "click" },
     { name = "django" },
+    { name = "django-allauth" },
     { name = "django-bootstrap5" },
     { name = "django-browser-reload" },
     { name = "django-cotton" },
@@ -167,6 +178,7 @@ requires-dist = [
     { name = "charset-normalizer", specifier = "==3.4.1" },
     { name = "click", specifier = "==8.1.8" },
     { name = "django", specifier = "==5.1.6" },
+    { name = "django-allauth", specifier = ">=65.8.1" },
     { name = "django-bootstrap5", specifier = ">=25.1" },
     { name = "django-browser-reload", specifier = "==1.18.0" },
     { name = "django-cotton", specifier = "==1.6.0" },
